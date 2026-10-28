@@ -1,15 +1,15 @@
-import java.util.Arrays;
 public class  ResortedArray{
    public static void main(String [] args){
   
+   int[][] arraySet = {
+                        {1,2,6},
+                        {4,5,6},
+                        {7,8,9}
+                      };
    
-
-int[] arraySet = {1, 2, 6,4, 5, 8};
-int[] arraySetTwo = {3,4,2,5,6,6,5};
-
-int[] result = arraySet + arraySetTwo;
-System.out.println(Arrays.toString(result));
-// Output: [[1, 2, 6], [4, 5, 8]]
-
+  swapResortedArray(arraySet); 
+  } 
+  public static int[][] swapResortedArray(int[][] numbers){
+ 
 }
 }
