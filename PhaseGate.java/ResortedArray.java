@@ -8,11 +8,11 @@ public class  ResortedArray{
                         {7,8,9,4}
                       };
    
-  int[][] result = swapResortedArray(arraySet); 
+  int[][] result = getSwapResortedArray(arraySet); 
   System.out.println(Arrays.deepToString(result));
   
   } 
-  public static int[][] swapResortedArray(int[][] numbers){
+  public static int[][] getSwapResortedArray(int[][] numbers){
   
   for (int row = 0; row < numbers.length; row ++){
           
