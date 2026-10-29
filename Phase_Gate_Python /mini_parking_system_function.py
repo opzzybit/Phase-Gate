@@ -25,28 +25,5 @@ def  get_add_to_slot_space_two(numbers):
 
 
 
-#count = 1
-#slot_input = " "
-#while(True):
- #   print()
-  #  print("Enter 00 when you are done and 09 to exit from the app")
-   # print(f"input {count}")
-    #userinput = input("ENTER THE NUMBER OF SLOT FROM 1-20 :  ")
-    
-    #count += 1
-    #if  userinput == "09":
-     #   break
-      #  print("Thanks for shopping with us")
-        
-    #elif userinput == "00":
-     #   print("SLOT TAKING")
-      #  break
-    
-    #slot_input = userinput
-    
-    
-
-#occupied_slot_display = add_to_slot_space(slot_input)
-
 
 
