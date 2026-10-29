@@ -5,7 +5,7 @@ public class  ResortedArray{
    int[][] arraySet = {
                         {1,2,6},
                         {4,5,6},
-                        {7,8,9}
+                        {7,8,9,4}
                       };
    
   int[][] result = swapResortedArray(arraySet); 
@@ -14,18 +14,23 @@ public class  ResortedArray{
   } 
   public static int[][] swapResortedArray(int[][] numbers){
   
-  int arrayLength = numbers.length; 
-  int[][] reversed = new int[arrayLength][arrayLength];
-  
-  for (int index = 0; index < numbers.length; index ++){
-          for(int count = numbers.length - 1  ; count >= 0; count--){
-                reversed[count] = numbers[count]; 
-             
-             
-             }
-           }
-  return reversed;
+  for (int row = 0; row < numbers.length; row ++){
+          
+          int front = 0;
+          
+          int back = numbers[0].length - 1;
+          
+          while (front < back){
+          int tempoary = numbers[row][front];
+          numbers[row][front] = numbers[row][back];
+          numbers[row][back] = tempoary;
+          
+          front ++;
+          back--;
+          }
+  }
+  return numbers;
 
 
-}
+  }
 }
