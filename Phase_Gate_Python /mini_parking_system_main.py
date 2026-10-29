@@ -3,8 +3,9 @@ from mini_parking_system_function import *
 
 running = True
 car_slot_display ="""
+====================================================     
      WELCOME   TO   OPZZYBIT  MINI  CAR  SLOT          
-          
+====================================================
           MINI CAR SLOT MENU
 
 1. Park   IN  Slot 
@@ -36,17 +37,18 @@ while True :
             slot_input = []
             
             while(True):
-                print("Enter 00 when you are done and 09 to exit from the app")
+                print("Enter [exit] when you are done")
                 print()
                 print(f"input {count}")
                 userinput = input("ENTER THE NUMBER OF SLOT FROM 1-20 :  ")
-                slot_input.append(int(userinput))
                 
-                
-                if userinput == "00":
+                if userinput == "exit":
                     print("SLOT TAKING")
                     break
     
+                slot_input.append(int(userinput))
+                
+                
             print()
             print(add_to_slot_space(slot_input))
             print()
