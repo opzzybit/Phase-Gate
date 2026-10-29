@@ -3,7 +3,7 @@ public class  ResortedArray{
    public static void main(String [] args){
   
    int[][] arraySet = {
-                        {1,2,6},
+                        {1,8,6,4},
                         {4,5,6},
                         {7,8,9,4}
                       };
@@ -18,15 +18,15 @@ public class  ResortedArray{
           
           int front = 0;
           
-          int back = numbers[0].length - 1;
+          int back = numbers[row].length - 1;
           
           while (front < back){
-          int tempoary = numbers[row][front];
-          numbers[row][front] = numbers[row][back];
-          numbers[row][back] = tempoary;
-          
-          front ++;
-          back--;
+              int tempoary = numbers[row][front];
+              numbers[row][front] = numbers[row][back];
+              numbers[row][back] = tempoary;
+              
+              front ++;
+              back--;
           }
   }
   return numbers;
