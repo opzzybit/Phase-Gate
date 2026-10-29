@@ -12,7 +12,7 @@ def sorting_Added_list_set (list_set):
                 
     return list_set
 
-array_Set_One = [1,4,4]
+array_Set_One = [1,8,4]
 array_Set_Two = [1,3,2]
 
 
