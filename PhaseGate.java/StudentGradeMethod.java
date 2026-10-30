@@ -1,4 +1,3 @@
-import java.util.*;
 public class StudentGradeMethod{
     
     private int addTotalScores;
@@ -11,13 +10,13 @@ public class StudentGradeMethod{
             total += index;
         }
         addTotalScores += total;
-        return "Sum Successfully!!!!";
+        return "Sum Saved Successfully!!!!";
     }
     public String setStudentScoreAverage(int number){
         double scoreAverage  = addTotalScores / number;
         
         addAverageScore += scoreAverage;
-        return "Averaged Successfully!!!!";
+        return "Averaged Saved Successfully!!!!";
     }
     
     

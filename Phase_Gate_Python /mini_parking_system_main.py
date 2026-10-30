@@ -4,7 +4,7 @@ from mini_parking_system_function import *
 running = True
 car_slot_display ="""
 ====================================================     
-     WELCOME   TO   OPZZYBIT  MINI  CAR  SLOT          
+     WELCOME   TO   OPZZY BIT  MINI  CAR  SLOT          
 ====================================================
           MINI CAR SLOT MENU
 

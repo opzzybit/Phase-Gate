@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.ArrayList;
 public class StudentGrade{
     public static void main(String [] args){
     
@@ -29,28 +31,53 @@ public class StudentGrade{
         """);
         int studentcount = 1;
         int countTwo = 0;
-        for (int runTime = 1; runTime <= userInput; runTime++){
+        int runTimeCount = 1;
+        for (int runTime = runTimeCount; runTime <= (userInput - 1) + runTimeCount; runTime++){
              int count = 1;
              for(int studentAmount = 0; studentAmount <= userInputTwo - 1 ; studentAmount++){
                   System.out.println("Entering Score for student " + studentcount);
                   System.out.println("Enter Score subject " + count);
-                  int scoreOne = input.nextInt();
+                  int scores = input.nextInt();
                   
+                      if (scores >= 0 && scores <= 100){
+                          
+                          studentScoreStorage[countTwo] = scores;
                   
-                  studentScoreStorage[countTwo] = scoreOne;
-                  count++;
-                  countTwo++;
+                          System.out.println("SAVING>>>>>>>>>>>>>>>>>>>>>");
+                          System.out.println("SAVED  SUCCESSFULLY");
+                          
+                          count++;
+                          countTwo++;
+                          studentcount++;  
+                      }
+                      else if (scores < 0 ){
+                          System.out.println("The Number Is Lesser Than Expected ");
+                      }
+                      else if (scores > 100 ){
+                          System.out.println("The Number Is Greater Than Expected ");
+                          runTimeCount++;
+                      }
                   
                   System.out.println();
-              }
-        studentcount++;    
+        
+        } 
         }
+        System.out.println(Arrays.toString(studentScoreStorage));
+        
+        
         studentScoreGrade.setStudentScoreTotal(studentScoreStorage);
         int totalScore = studentScoreGrade.getStudentScoreTotal();
-        System.out.println("The Total Grade = " +  totalScore);
-    
-        studentScoreGrade.setStudentScoreAverage(studentScoreStorage.length);
-        System.out.println("The Average Grade = " + studentScoreGrade.getStudentScoreAverage());
+        
+        studentScoreGrade.setStudentScoreAverage(userInput);
+        double averageScore = studentScoreGrade.getStudentScoreAverage();
+        
+        System.out.printf("""  
+        ============================================================
+        Class Total Score  = %d
+        
+        Class Average Score = %.1f
+        ============================================================
+        """, totalScore, averageScore);
     
     }
 }
