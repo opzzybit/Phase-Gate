@@ -1,9 +1,5 @@
 const userInput = require("prompt-sync")();
 
-// ============================================================================
-//                                FUNCTIONS
-// ============================================================================
-
 function setStudentScoreTotal(numbers){
     let total = 0;
     for (let index = 0; index < numbers.length; index++){
@@ -57,9 +53,6 @@ function setEachStudentPosition(numbers, studentAmount){
     return position;
 }
 
-// ============================================================================
-//                               MAIN PROCESS
-// ============================================================================
 
 let userInputStudents = Number(userInput("How Many Student Do You Have: "));
 
