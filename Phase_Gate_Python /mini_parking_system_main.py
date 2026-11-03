@@ -42,19 +42,17 @@ while True :
         
         case "2":
             
-            
-            
             count = 1
             slot_input = []
             
             while(True):
                 print()
-                print("Enter [exit] when you are done")
+                print("Enter [done] when you are done")
                 print()
                 print(f"input {count}")
                 userinput = input("ENTER THE NUMBER OF SLOT FROM 1-20 :  ")
                 
-                if userinput == "done":
+                if userinput.casefold() == "done":
                     print()
                     print("SLOT TAKING")
                     break
