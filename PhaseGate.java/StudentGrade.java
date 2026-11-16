@@ -54,6 +54,12 @@ public class StudentGrade{
                      System.out.println("Enter Score subject " + count);
                      int scores = input.nextInt();
                      
+                     if (isDigit(scores)){
+                        break;
+                     }
+                     else{
+                        System.out.println("Enter a number");
+                     }
                      
                      if (scores >= 0 && scores <= 100) {
                           studentScoreStorage[countTwo] = scores;

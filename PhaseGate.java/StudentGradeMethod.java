@@ -1,30 +1,28 @@
 public class StudentGradeMethod{
     
-    private int addTotalScores;
-    private float addAverageScore;
-    private int[]  addEachStudentTotal;
-    private double[]  addEachStudentAverage;
-    private int[]   addEachStudentPosition;
+    private int TotalScores;
+    private float AverageScore;
+    private int[]  EachStudentTotal;
+    private double[]  EachStudentAverage;
+    private int[]   EachStudentPosition;
     
     
-    public String setStudentScoreTotal(int[] numbers){
+    public void setStudentScoreTotal(int[] numbers){
           
         int total = 0;
         for (int index : numbers){
             total += index;
         }
-        this.addTotalScores = total;
-        return "Sum Saved Successfully!!!!";
+        TotalScores = total;
     }
     
-    public String setStudentScoreAverage(int number){
+    public void setStudentScoreAverage(int number){
         float scoreAverage  = (float) addTotalScores / number;
         
-        this.addAverageScore += scoreAverage;
-        return "Averaged Saved Successfully!!!!";
+        AverageScore += scoreAverage;
     }
     
-    public  String  setEachStudentTotalAndAverage(int[] numbers,int StudentAmount, int subjectAmount){
+    public void setEachStudentTotalAndAverage(int[] numbers,int StudentAmount, int subjectAmount){
     
         int[] studentTotal = new int[StudentAmount];
         double[] studentAverage = new double[StudentAmount];
@@ -43,13 +41,11 @@ public class StudentGradeMethod{
             studentAverage[runTime] = (double) currentTotalScores / subjectAmount;
         }
         
-        this.addEachStudentTotal = studentTotal;
-        this.addEachStudentAverage = studentAverage;
-      
-      return "Each Score Sum And Average Saved Successfully!!!!";
+        EachStudentTotal = studentTotal;
+        EachStudentAverage = studentAverage;
       }
       
-      public String setEachStudentPosition(int[] numbers, int studentAmount){
+    public void setEachStudentPosition(int[] numbers, int studentAmount){
           int[]  position = new int[studentAmount];
           
           for(int runTime = 0; runTime < studentAmount; runTime++){
@@ -61,8 +57,7 @@ public class StudentGradeMethod{
               }
               position[runTime] = rank;
           }
-          this.addEachStudentPosition = position;
-      return  "Gotten The Position Of Each Student ";
+          EachStudentPosition = position;
       }
     
     
